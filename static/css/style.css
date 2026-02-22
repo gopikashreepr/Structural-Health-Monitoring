@@ -1,0 +1,86 @@
+/* Custom styles for the sensor dashboard */
+
+/* Ensure proper spacing and layout */
+.container-fluid {
+    max-width: 1400px;
+}
+
+/* Chart container styling */
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Chart canvas styling */
+canvas {
+    max-height: 300px;
+}
+
+/* Value display styling */
+#vibration-value, #strain-value, #temperature-value {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Status indicators */
+.alert {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    canvas {
+        max-height: 250px;
+    }
+}
+
+/* Animation for value changes */
+.value-updated {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Chart responsive container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Custom scrollbar for better dark theme integration */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bs-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-light);
+}
